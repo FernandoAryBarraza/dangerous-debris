@@ -1,10 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Footer from "../components/Footer.astro";
-import astroLogo from "../assets/astro.svg";
-import background from "../assets/background.svg";
 import "../styles/global.css";
-import Header from "../components/Header.astro";
 
 const pageTitle = "Sobre mi";
 const identity = {
@@ -33,13 +29,8 @@ const textCase = "uppercase";
 ---
 <Layout>
 <div id="container">
-  <img id="background" src={background.src} alt="" fetchpriority="high" />
   <main>
-    <section id="hero">
-      <a href="https://astro.build">
-        <img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" />
-      </a>
-      
+    <section id="hero">      
       <h1>{pageTitle}</h1>
       <h2>...!y mi nuevo sitio Astro!</h2>
 
@@ -73,11 +64,11 @@ const textCase = "uppercase";
       <ul>
         {skills.map((skill) => <li class="skill">{skill}</li>)}
       </ul>
-	  	{happy && <p>¡Estoy feliz de aprender Astro!</p>}
+	  	  {happy && <p>¡Estoy feliz de aprender Astro!</p>}
 
-		{finished && <p>¡He terminado este tutorial!</p>}
+		    {finished && <p>¡He terminado este tutorial!</p>}
 
-		{goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
+		    {goal === 3 ? <p>Mi objetivo es terminar en 3 días.</p> : <p>Mi objetivo no son 3 días.</p>}
     </section>
   </main>
 </div>
