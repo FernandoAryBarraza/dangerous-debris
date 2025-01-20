@@ -1,6 +1,7 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Greeting from '../components/Greeting';
 const pageTitle = "Página de Inicio";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -9,4 +10,5 @@ const pageTitle = "Página de Inicio";
 
 <Layout pageTitle={pageTitle}>
     <Welcome />
+    <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari", "Qué tal", "Hola a todos"]} />
 </Layout>
